@@ -1,0 +1,10 @@
+[Unit]
+Description=A free and minimal NetBIOS Name Service responder daemon
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/nbnsd
+Restart=on-failure
+
+[Install]
+WantedBy=network.target

@@ -7,3 +7,7 @@ nbnsd: nbnsd.o
 
 clean:
 	rm -f *.o nbnsd *~
+
+install: all
+	mkdirhier $(DESTDIR)/usr/bin
+	install -m 0755 nbnsd ${DESTDIR}/usr/bin
